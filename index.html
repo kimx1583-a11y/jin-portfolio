@@ -1,22 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Jin Kim — Marketing Analytics and Business Analytics portfolio." />
-<title>Jin Kim | Marketing & Business Analytics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Questrial&display=swap" rel="stylesheet">
+
 <style>
-:root{--ink:#203047;--muted:#536377;--bg:#f8f8f5;--white:#fff;--accent:#235e66;--light:#e7f1ef;--line:#dce3e2}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.65}a{color:var(--accent)}a:hover{text-decoration-thickness:2px}.wrap{max-width:1080px;padding:0 28px;margin:auto}header{background:rgba(248,248,245,.97);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:3}nav{display:flex;justify-content:space-between;align-items:center;min-height:76px;gap:16px}.brand{font-weight:800;color:var(--ink);text-decoration:none;letter-spacing:-.04em;font-size:1.25rem}.links{display:flex;gap:22px;flex-wrap:wrap}.links a{text-decoration:none;font-size:.93rem;color:var(--ink)}.hero{padding:92px 0 76px;display:grid;grid-template-columns:1.35fr .8fr;align-items:center;gap:60px}.eyebrow{font-weight:700;color:var(--accent);font-size:.9rem;text-transform:uppercase;letter-spacing:.13em}h1{font-size:clamp(2.4rem,5vw,4.25rem);line-height:1.14;letter-spacing:-.05em;margin:14px 0 22px}h2{font-size:clamp(1.65rem,3vw,2.2rem);letter-spacing:-.035em;margin:0 0 16px}.lead{color:var(--muted);font-size:1.13rem;max-width:610px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--accent);color:white;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:9px}.btn.alt{color:var(--accent);background:var(--light)}.portrait{min-height:365px;background:linear-gradient(145deg,#e3ece9,#e9e7dd);border-radius:24px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:20px;overflow:hidden;border:1px solid var(--line)}.portrait img{width:100%;height:100%;max-height:410px;object-fit:cover;border-radius:16px}.portrait .empty{font-size:1.05rem;color:var(--muted);max-width:240px}.portrait .empty b{display:block;color:var(--ink);font-size:1.45rem;margin-bottom:8px}.section{padding:62px 0;border-top:1px solid var(--line)}.section-intro{max-width:790px;color:var(--muted);margin-bottom:24px}.pills{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0}.pill{background:var(--light);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:.91rem;font-weight:650}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:16px;padding:25px}.card h3{margin:0 0 9px;font-size:1.13rem}.card p{color:var(--muted);margin:0}.kicker{font-size:.79rem;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);font-weight:700;margin-bottom:8px}.notice{padding:13px 16px;border-radius:9px;background:#fff3d9;color:#725016;margin-top:16px;font-size:.93rem}.contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}.contact a{background:white;border:1px solid var(--line);border-radius:9px;padding:12px 16px;text-decoration:none;font-weight:600}.footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.87rem}@media(max-width:750px){.hero{grid-template-columns:1fr;padding:45px 0;gap:28px}.portrait{min-height:260px;max-width:420px}.grid{grid-template-columns:1fr}.links{gap:12px}nav{align-items:flex-start;flex-direction:column;padding:15px 0}}
+:root {
+  --ink: #ffffff;
+  --muted: #c2c2c2;
+  --bg: #08090b;
+  --white: #ffffff;
+  --accent: #ffffff;
+  --light: #24262b;
+  --line: #34363b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--white);
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.wrap {
+  max-width: 1080px;
+  padding: 0 28px;
+  margin: auto;
+}
+
+/* Navigation */
+
+header {
+  background: rgba(8, 9, 11, 0.97);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 76px;
+  gap: 16px;
+}
+
+.brand {
+  font-family: 'Questrial', sans-serif;
+  font-weight: 400;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: -0.04em;
+  font-size: 1.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 0.93rem;
+  color: var(--white);
+}
+
+/* Hero Section */
+
+.hero {
+  padding: 92px 0 76px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.8fr;
+  align-items: center;
+  gap: 60px;
+}
+
+.eyebrow {
+  font-weight: 600;
+  color: var(--white);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+}
+
+h1, h2, h3 {
+  font-family: 'Questrial', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1.14;
+  letter-spacing: -0.04em;
+  margin: 14px 0 22px;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.035em;
+  margin: 0 0 16px;
+}
+
+.lead {
+  color: var(--muted);
+  font-size: 1.13rem;
+  max-width: 610px;
+}
+
+/* Buttons */
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #08090b;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 13px 20px;
+  border-radius: 9px;
+}
+
+.btn.alt {
+  color: #ffffff;
+  background: #282b30;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Profile Photo */
+
+.portrait {
+  min-height: 365px;
+  background: #202226;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.portrait img {
+  width: 100%;
+  height: 100%;
+  max-height: 410px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.portrait .empty {
+  font-size: 1.05rem;
+  color: var(--muted);
+  max-width: 240px;
+}
+
+.portrait .empty b {
+  display: block;
+  color: var(--white);
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+}
+
+/* Sections */
+
+.section {
+  padding: 62px 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-intro {
+  max-width: 790px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+/* Skills */
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0;
+}
+
+.pill {
+  background: #25282d;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.91rem;
+  font-weight: 600;
+}
+
+/* Project Cards */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #17191d;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.card h3 {
+  margin: 0 0 9px;
+  font-size: 1.25rem;
+}
+
+.card p {
+  color: var(--muted);
+  margin: 0;
+}
+
+.kicker {
+  font-size: 0.79rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #d1d1d1;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Notices */
+
+.notice {
+  padding: 13px 16px;
+  border-radius: 9px;
+  background: #28251d;
+  color: #f1d99b;
+  margin-top: 16px;
+  font-size: 0.93rem;
+}
+
+/* Contact */
+
+.contact {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact a {
+  background: #17191d;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 26px 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+
+/* Mobile */
+
+@media (max-width: 750px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 45px 0;
+    gap: 28px;
+  }
+
+  .portrait {
+    min-height: 260px;
+    max-width: 420px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    gap: 12px;
+  }
+
+  nav {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 15px 0;
+  }
+}
 </style>
-</head>
-<body>
-<header><nav class="wrap"><a class="brand" href="#top">Jin Kim<span style="color:var(--accent)">.</span></a><div class="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a></div></nav></header>
-<main id="top" class="wrap">
-<section class="hero"><div><div class="eyebrow">Marketing × Business Analytics</div><h1>Turning marketing experience into data-driven insights.</h1><p class="lead">Hi, I'm Jin Kim, a Master of Science in Business Analytics student at Brandeis University with professional experience in marketing, communications, and consulting.</p><div class="actions"><a class="btn" href="#about">Get to Know Me</a><a class="btn alt" href="#resume">View My Resume</a></div></div><div class="portrait" aria-label="Smiling headshot placeholder"><img src="assets/smiling-headshot.jpg" alt="Jin Kim smiling — professional headshot" onerror="this.style.display='none';this.nextElementSibling.style.display='block'" /><div class="empty" style="display:none"><b>Your Smiling Photo</b>Place a smiling headshot at <code>assets/smiling-headshot.jpg</code> before submitting.</div></div></section>
-<section class="section" id="about"><div class="eyebrow">About Me</div><h2>Hi, I'm Jin.</h2><p class="section-intro">Before pursuing my master's degree in Business Analytics at Brandeis University, I spent several years working across product marketing, digital marketing, marketing communications, and consulting in South Korea. Through these experiences, I became interested in how customer behavior, business data, and marketing strategy connect. I am now developing my analytical and technical skills to complement my professional background, with a particular interest in marketing analytics and consumer insights. I hope to help organizations ask better questions, understand their customers, and make more informed decisions.</p></section>
-<section class="section" id="skills"><div class="eyebrow">Technical & Business Skills</div><h2>What I'm Building On</h2><div class="pills"><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Excel</span><span class="pill">Marketing Analytics</span><span class="pill">Customer Insights</span><span class="pill">Marketing Strategy</span><span class="pill">Data Analysis</span></div><p class="section-intro">My current studies focus on translating data into practical business questions and actionable recommendations.</p></section>
-<section class="section" id="projects"><div class="eyebrow">Selected Work</div><h2>Projects & Interests</h2><p class="section-intro">These project areas reflect my coursework and portfolio interests. Add completed project links and evidence before presenting them as finished work.</p><div class="grid"><article class="card"><div class="kicker">Portfolio project in development</div><h3>Retail Sales & Demand Forecasting</h3><p>Exploring how structured retail sales and inventory data can support demand analysis and business decisions.</p></article><article class="card"><div class="kicker">Coursework focus</div><h3>Marketing & Consumer Insights</h3><p>Using analytical thinking to investigate customer engagement, marketing performance, and strategic questions.</p></article></div></section>
-<section class="section" id="resume"><div class="eyebrow">Professional Background</div><h2>My Resume</h2><p class="section-intro">Explore my previous experience in marketing, communications, and consulting, alongside my graduate studies in business analytics.</p><a class="btn" href="assets/Jin_Kim_Resume.pdf" target="_blank" rel="noopener">Open Resume (PDF)</a><div class="notice">Before submitting: add your actual PDF resume as <code>assets/Jin_Kim_Resume.pdf</code>. Until then, this button will not open a document.</div></section>
-<section class="section" id="contact"><div class="eyebrow">Let's Connect</div><h2>Contact Information</h2><p class="section-intro">I'm interested in connecting with professionals and teams working in marketing analytics, consumer insights, and business analytics.</p><div class="contact"><a href="mailto:YOUR_EMAIL@example.com">Email: YOUR_EMAIL@example.com</a><a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a></div><div class="notice">Before submitting: replace <code>YOUR_EMAIL@example.com</code> and <code>YOUR-LINKEDIN-HANDLE</code> with your real contact details.</div></section>
-</main><footer class="footer"><div class="wrap">© 2026 Jin Kim · Marketing & Business Analytics</div></footer>
-</body></html>
+
